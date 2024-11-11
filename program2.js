@@ -1,7 +1,13 @@
 const decodeTheRing = function (s, p) {
+  if (s.length !== p.length) return false;
 
-    // write your code here
+  for (let i = 0; i < s.length; i++) {
+      if (p[i] !== '*' && s[i] !== p[i]) {
+          return false;
+      }
+  }
 
-  };
-  
-  module.exports = decodeTheRing;
+  return true;
+};
+
+module.exports = decodeTheRing;
